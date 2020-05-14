@@ -12,7 +12,6 @@ import NotLogged from '../NotLogged/NotLogged';
 interface AuthContextType {
   signIn: (data: any) => Promise<void>;
   signOut: () => void;
-  signUp: (data: any) => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextType>(null as any);
@@ -56,15 +55,11 @@ const AuthControlNavigator = () => {
   const authContext = useMemo(
     () => ({
       signIn: async (data: any) => {
-        // TokenManager.setToken(dummy-auth-token);
+        TokenManager.setToken('dummy-auth-token');
         console.log('data', data);
         dispatch({ type: ActionType.SIGN_IN, token: 'dummy-auth-token' });
       },
       signOut: () => dispatch({ type: ActionType.SIGN_OUT }),
-      signUp: async (data: any) => {
-        // TokenManager.setToken(dummy-auth-token);
-        dispatch({ type: ActionType.SIGN_IN, token: 'dummy-auth-token' });
-      },
     }),
     [],
   );
