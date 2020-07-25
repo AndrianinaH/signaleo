@@ -1,4 +1,4 @@
-package com.signaleo;
+package com.signaleo.io;
 
 import android.app.Application;
 import android.content.Context;

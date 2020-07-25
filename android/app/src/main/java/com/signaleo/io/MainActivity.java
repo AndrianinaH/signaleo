@@ -1,4 +1,4 @@
-package com.signaleo;
+package com.signaleo.io;
 
 import com.facebook.react.ReactActivity;
 
