@@ -12,7 +12,6 @@ enum ROUTES {
   CoVoiturage = 'CoVoiturage',
   Covid19 = 'Covid19',
   StationService = 'StationService',
-  CodeDeLaRoute = 'CodeDeLaRoute',
 
   // ---- Auth
   Login = 'Login',

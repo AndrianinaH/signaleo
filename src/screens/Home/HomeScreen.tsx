@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import Color from '../../themes/Color';
-import { Button } from 'react-native-paper';
+import { Button, IconButton } from 'react-native-paper';
 import { AuthContext } from '../../navigation/AuthControl/AuthControlNavigator';
 
 const styles = StyleSheet.create({
@@ -22,7 +22,10 @@ const HomeScreen: React.FC<Props> = () => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={styles.title}>Home</Text>
-      <Button onPress={onHandleLogout}>Logout</Button>
+      <Button onPress={onHandleLogout} color={Color.black}>
+        Logout
+      </Button>
+      <IconButton icon="pencil" color={Color.black} />
     </View>
   );
 };
