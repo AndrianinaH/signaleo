@@ -11,7 +11,7 @@ enum ROUTES {
   Signup = 'Signup',
 
   // ----- Bottom nav bar
-  Home = 'Home',
+  Home = 'Signaleo',
   // ----- principal Routes
   Actu = 'Actu',
   CoVoiturage = 'CoVoiturage',
