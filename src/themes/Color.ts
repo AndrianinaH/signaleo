@@ -12,4 +12,7 @@ export default {
     lighter: '#FFFFFF40',
     full: '#ffffff00',
   },
+  blue: {
+    vogue: '#052F5F',
+  },
 };

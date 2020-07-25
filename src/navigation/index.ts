@@ -6,16 +6,17 @@ enum ROUTES {
   // ----- Logged
   LoggedIn = 'LoggedIn',
 
-  // ----- Bottom nav bar
-  // ----- principal Routes
-  Home = 'Home',
-  CoVoiturage = 'CoVoiturage',
-  Covid19 = 'Covid19',
-  StationService = 'StationService',
-
   // ---- Auth
   Login = 'Login',
   Signup = 'Signup',
+
+  // ----- Bottom nav bar
+  Home = 'Home',
+  // ----- principal Routes
+  Actu = 'Actu',
+  CoVoiturage = 'CoVoiturage',
+  Covid19 = 'Covid19',
+  StationService = 'StationService',
 }
 
 export default ROUTES;

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 
 interface Props {}
 
-const HomeScreen: React.FC<Props> = () => {
+const ActuScreen: React.FC<Props> = () => {
   const { signOut } = useContext(AuthContext);
 
   const onHandleLogout = () => {
@@ -30,4 +30,4 @@ const HomeScreen: React.FC<Props> = () => {
   );
 };
 
-export default HomeScreen;
+export default ActuScreen;
