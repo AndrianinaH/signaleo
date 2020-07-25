@@ -1,17 +1,36 @@
-import React from 'react';
-import ROUTES from '..';
-import HomeScreen from '../../screens/Home/HomeScreen';
-import { createStackNavigator } from '@react-navigation/stack';
+import * as React from 'react';
+import { BottomNavigation, Text } from 'react-native-paper';
 
-interface Props {}
+/**
+ * https://reactnavigation.org/docs/material-bottom-tab-navigator
+ */
 
-const Stack = createStackNavigator();
+const MusicRoute = () => <Text>Music</Text>;
 
-const Logged = (props: Props) => {
+const AlbumsRoute = () => <Text>Albums</Text>;
+
+const RecentsRoute = () => <Text>Recents</Text>;
+
+const Logged = () => {
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'music', title: 'Music', icon: 'queue-music' },
+    { key: 'albums', title: 'Albums', icon: 'album' },
+    { key: 'recents', title: 'Recents', icon: 'history' },
+  ]);
+
+  const renderScene = BottomNavigation.SceneMap({
+    music: MusicRoute,
+    albums: AlbumsRoute,
+    recents: RecentsRoute,
+  });
+
   return (
-    <Stack.Navigator>
-      <Stack.Screen name={ROUTES.Home} component={HomeScreen} />
-    </Stack.Navigator>
+    <BottomNavigation
+      navigationState={{ index, routes }}
+      onIndexChange={setIndex}
+      renderScene={renderScene}
+    />
   );
 };
 
